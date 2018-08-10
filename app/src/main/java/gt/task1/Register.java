@@ -1,5 +1,7 @@
 package gt.task1;
 
+import android.arch.persistence.room.Room;
+import android.arch.persistence.room.RoomDatabase;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,10 +13,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Register extends AppCompatActivity {
+
     EditText id, name, age, college, speciality, password;
     Spinner gander;
+
+    //*********************************************//
+
+    AppDB db ;
+    List<Uesr> uesrs ;
+
+    //********************************************//
 
     Button reREGISTER;
 
@@ -29,6 +40,14 @@ public class Register extends AppCompatActivity {
         speciality = findViewById(R.id.SPECIALITY);
         password = findViewById(R.id.PASSWORD);
         gander = findViewById(R.id.GANDER);
+
+        //*********************************************//
+
+         db = Room.databaseBuilder(getApplicationContext(),AppDB.class,"Name of ?").allowMainThreadQueries().build() ;
+         uesrs =db.dao().getUsers() ;
+
+        //********************************************//
+
     }
 
     public void reREGISTER(View view) {
@@ -46,8 +65,11 @@ public class Register extends AppCompatActivity {
         uesr.setPassWard(password.getText().toString());
         uesr.setGander(Tview.getText().toString());
 
-        Intent intent = new Intent(Register.this, Home.class);
-        intent.putExtra("uesrData",uesr) ;
+        db.dao().insertAll(uesr);                                                                    // push to database
+
+
+        Intent intent = new Intent(Register.this, RViow.class);
+      //   intent.putExtra("uesrData",uesr) ;
         startActivity(intent);
 
         Toast.makeText(this, "Done", Toast.LENGTH_LONG).show();

@@ -14,26 +14,86 @@
         android:layout_margin="8dp"
         card_view:cardCornerRadius="10dp">
 
-        <TextView
-            android:id="@+id/Name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="5dp"
-            android:paddingLeft="8dp"
-            android:paddingTop="5dp"
-            android:text="Name : "
-            android:textSize="16sp" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            tools:context=".MainActivity">
+            <TextView
+                android:id="@+id/NAME0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="15dp"
+                android:text="Name : "
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/Id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:paddingBottom="5dp"
-            android:paddingLeft="8dp"
-            android:paddingTop="5dp"
-            android:text="ID : "
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/ID0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="15dp"
+                android:text="ID : "
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/AGE0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="15dp"
+                android:text="Age : "
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/GANDER0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="14dp"
+                android:text="Gander : "
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/COLLEGE0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:text="College : "
+                android:layout_marginTop="15dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/SPECIALITY0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:text="Speciality : "
+                android:layout_marginTop="15dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/PASSWORD0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="15dp"
+                android:text="Password : "
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
 
     </android.support.v7.widget.CardView>
 

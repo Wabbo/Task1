@@ -21,7 +21,6 @@
         </activity>
         <activity android:name=".RViow" />
         <activity android:name=".Temp" />
-        <activity android:name=".CV"></activity>
     </application>
 
 </manifest>

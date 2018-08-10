@@ -10,21 +10,26 @@ import java.util.List;
 
 public class AD extends RecyclerView.Adapter < AD.Vholder > {
 
-    List<NewM> newMList ;
+    List<Uesr> uesrList ;
 
-    public AD(List<NewM> newMList) {
-        this.newMList = newMList;
+    public AD(List<Uesr> uesrList) {
+        this.uesrList = uesrList;
     }
 
     class Vholder extends RecyclerView.ViewHolder {
 
-        TextView name , id ;
+        TextView name , id ,AGE, GANDER,COLLEGE,SPECIALITY,PASSWORD;
 
         public Vholder(View itemView) {
 
             super(itemView);
-            name = itemView.findViewById(R.id.Name) ;
-            id = itemView.findViewById(R.id.Id) ;
+            name = itemView.findViewById(R.id.NAME0) ;
+            id = itemView.findViewById(R.id.ID0) ;
+            AGE = itemView.findViewById(R.id.AGE0) ;
+            GANDER = itemView.findViewById(R.id.GANDER0) ;
+            COLLEGE = itemView.findViewById(R.id.COLLEGE0) ;
+            SPECIALITY = itemView.findViewById(R.id.SPECIALITY0) ;
+            PASSWORD = itemView.findViewById(R.id.PASSWORD0) ;
         }
     }
 
@@ -38,16 +43,21 @@ public class AD extends RecyclerView.Adapter < AD.Vholder > {
         return holder ;
     }
 
-    @Override
+    @Override ///// *********************************************   //////
     public void onBindViewHolder(@NonNull Vholder holder, int position) {
-    NewM m = newMList.get(position);
-    holder.id.setText(holder.id.getText().toString()+m.id);
-    holder.name.setText(holder.name.getText().toString()+m.name);
+    Uesr m = uesrList.get(position);
+    holder.id.setText(holder.id.getText().toString()+m.getId());
+    holder.name.setText(holder.name.getText().toString()+m.getName());
+    holder.AGE.setText(holder.AGE.getText().toString()+m.getAge());
+    holder.GANDER.setText(holder.GANDER.getText().toString()+m.getGander());
+    holder.COLLEGE.setText(holder.COLLEGE.getText().toString()+m.getCollege());
+    holder.SPECIALITY.setText(holder.SPECIALITY.getText().toString()+m.getSpeciality());
+    holder.PASSWORD.setText(holder.PASSWORD.getText().toString()+m.getPassWard());
     }
 
     @Override
     public int getItemCount() {
-        return newMList.size();
+        return uesrList.size();
     }
 
 
