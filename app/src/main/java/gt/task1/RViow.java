@@ -15,8 +15,8 @@ public class RViow extends AppCompatActivity {
 
    // List<Uesr> uesrList =new ArrayList<>() ;
 
-  //  String id [] = {"10" ,"12" ,"30","40","50"} ;
-  //  String name [] = {"asd","cxvd","fdh","yqwe","fcsa"};
+   //  String id [] = {"10" ,"12" ,"30","40","50"} ;
+   //  String name [] = {"asd","cxvd","fdh","yqwe","fcsa"};
 
 
 
